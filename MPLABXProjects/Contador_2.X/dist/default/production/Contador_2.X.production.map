@@ -1,0 +1,44 @@
+MPLINK 5.08, LINKER
+Linker Map File - Created Wed Oct 11 19:05:32 2017
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x000098
+                   .cinit    romdata   0x00004c    program   0x000004
+.config_2007_BUILD/DEFAULT/PRODUCTION/CONTADO       code   0x002007    program   0x000002
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x00004d      
+                            0x002007    0x002007      
+            79 out of 8454 program addresses used, program memory utilization is 0%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                      DEC   0x000044    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_2.X\Contador_2.asm
+                 DISPLAY1   0x000004    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_2.X\Contador_2.asm
+                 DISPLAY2   0x000023    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_2.X\Contador_2.asm
+                  RETARDO   0x000042    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_2.X\Contador_2.asm
+                   SUBDEC   0x000049    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_2.X\Contador_2.asm
+                   SUBRET   0x000047    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_2.X\Contador_2.asm
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                 DISPLAY1   0x000004    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_2.X\Contador_2.asm
+                 DISPLAY2   0x000023    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_2.X\Contador_2.asm
+                  RETARDO   0x000042    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_2.X\Contador_2.asm
+                      DEC   0x000044    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_2.X\Contador_2.asm
+                   SUBRET   0x000047    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_2.X\Contador_2.asm
+                   SUBDEC   0x000049    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_2.X\Contador_2.asm
+
+

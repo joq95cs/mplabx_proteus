@@ -1,0 +1,504 @@
+MPASM 5.75                   SERIE_LUCES.ASM   10-10-2017  23:01:46         PAGE  1
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00001     LIST P=16F84A
+                      00002     
+                      00003     INCLUDE<P16F84A.INC>
+                      00001         LIST
+                      00002 
+                      00003 ;==========================================================================
+                      00004 ; Build date : Jul 02 2017
+                      00005 ;  MPASM PIC16F84A processor include
+                      00006 ; 
+                      00007 ;  (c) Copyright 1999-2017 Microchip Technology, All rights reserved
+                      00008 ;==========================================================================
+                      00009 
+                      00209         LIST
+                      00004     
+2007   3FF1           00005     __CONFIG _CP_OFF & _WDT_OFF & _PWRTE_ON & _XT_OSC
+                      00006     
+Warning[207]: Found label after column 1. (VAR1)
+  00000010            00007     VAR1 EQU 0X10
+                      00008  
+Warning[207]: Found label after column 1. (VAR2)
+  00000011            00009     VAR2 EQU 0X11
+                      00010     
+                      00011     ORG 0
+                      00012     
+0000   1683           00013     BSF STATUS, RP0
+                      00014     
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+0001   1405           00015     BSF TRISA, RA0
+                      00016     
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+0002   0186           00017     CLRF TRISB
+                      00018     
+0003   1283           00019     BCF STATUS, RP0
+                      00020     
+0004                  00021 SERIE_1
+                      00022     
+0004   3000           00023     MOVLW B'00000000'
+                      00024     
+0005   0086           00025     MOVWF PORTB
+                      00026     
+0006   1C05           00027     BTFSS PORTA, RA0
+                      00028     
+0007   2???           00029     GOTO SERIE_1
+                      00030     
+0008   2???           00031     CALL SEC1
+                      00032     
+0009   2???           00033     CALL SEC1
+                      00034     
+000A                  00035 SERIE_2
+                      00036     
+000A   3000           00037     MOVLW B'00000000'
+                      00038     
+000B   0086           00039     MOVWF PORTB
+MPASM 5.75                   SERIE_LUCES.ASM   10-10-2017  23:01:46         PAGE  2
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00040     
+000C   1C05           00041     BTFSS PORTA, RA0
+                      00042     
+000D   2???           00043     GOTO SERIE_2
+                      00044     
+000E   2???           00045     CALL SEC2
+                      00046     
+000F   2???           00047     CALL SEC2
+                      00048     
+0010   2???           00049     CALL SEC2
+                      00050     
+0011   2???           00051     CALL SEC2
+                      00052     
+0012                  00053 SERIE_3
+                      00054     
+0012   3000           00055     MOVLW B'00000000'
+                      00056     
+0013   0086           00057     MOVWF PORTB
+                      00058     
+0014   1C05           00059     BTFSS PORTA, RA0
+                      00060     
+0015   2???           00061     GOTO SERIE_3
+                      00062     
+0016   2???           00063     CALL SEC3
+                      00064     
+0017   2???           00065     CALL SEC3
+                      00066     
+0018   2???           00067     CALL SEC3
+                      00068     
+0019   2???           00069     CALL SEC3
+                      00070     
+001A   2???           00071     GOTO SERIE_1
+                      00072     
+001B                  00073 SEC1
+                      00074     
+001B   3001           00075     MOVLW B'00000001'
+                      00076     
+001C   0086           00077     MOVWF PORTB
+                      00078     
+001D   2???           00079     CALL RET
+                      00080     
+001E   3003           00081     MOVLW B'00000011'
+                      00082     
+001F   0086           00083     MOVWF PORTB
+                      00084     
+0020   2???           00085     CALL RET
+                      00086     
+0021   3007           00087     MOVLW B'00000111'
+                      00088     
+0022   0086           00089     MOVWF PORTB
+                      00090     
+0023   2???           00091     CALL RET
+                      00092     
+MPASM 5.75                   SERIE_LUCES.ASM   10-10-2017  23:01:46         PAGE  3
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+0024   300F           00093     MOVLW B'00001111'
+                      00094     
+0025   0086           00095     MOVWF PORTB
+                      00096     
+0026   2???           00097     CALL RET
+                      00098     
+0027   301F           00099     MOVLW B'00011111'
+                      00100     
+0028   0086           00101     MOVWF PORTB
+                      00102     
+0029   2???           00103     CALL RET
+                      00104     
+002A   303F           00105     MOVLW B'00111111'
+                      00106     
+002B   0086           00107     MOVWF PORTB
+                      00108     
+002C   2???           00109     CALL RET
+                      00110     
+002D   307F           00111     MOVLW B'01111111'
+                      00112     
+002E   0086           00113     MOVWF PORTB
+                      00114     
+002F   2???           00115     CALL RET
+                      00116     
+0030   30FF           00117     MOVLW B'11111111'
+                      00118     
+0031   0086           00119     MOVWF PORTB
+                      00120     
+0032   2???           00121     CALL RET
+                      00122     
+0033   307F           00123     MOVLW B'01111111'
+                      00124     
+0034   0086           00125     MOVWF PORTB
+                      00126     
+0035   2???           00127     CALL RET
+                      00128     
+0036   303F           00129     MOVLW B'00111111'
+                      00130     
+0037   0086           00131     MOVWF PORTB
+                      00132     
+0038   2???           00133     CALL RET
+                      00134     
+0039   301F           00135     MOVLW B'00011111'
+                      00136     
+003A   0086           00137     MOVWF PORTB
+                      00138     
+003B   2???           00139     CALL RET
+                      00140     
+003C   300F           00141     MOVLW B'00001111'
+                      00142     
+003D   0086           00143     MOVWF PORTB
+                      00144     
+003E   2???           00145     CALL RET
+MPASM 5.75                   SERIE_LUCES.ASM   10-10-2017  23:01:46         PAGE  4
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00146     
+003F   3007           00147     MOVLW B'00000111'
+                      00148     
+0040   0086           00149     MOVWF PORTB
+                      00150     
+0041   2???           00151     CALL RET
+                      00152     
+0042   3003           00153     MOVLW B'00000011'
+                      00154     
+0043   0086           00155     MOVWF PORTB
+                      00156     
+0044   2???           00157     CALL RET
+                      00158     
+0045   3001           00159     MOVLW B'00000001'
+                      00160     
+0046   0086           00161     MOVWF PORTB
+                      00162     
+0047   2???           00163     CALL RET
+                      00164     
+0048   3000           00165     MOVLW B'00000000'
+                      00166     
+0049   0086           00167     MOVWF PORTB
+                      00168     
+004A   2???           00169     CALL RET
+                      00170     
+004B   0008           00171     RETURN
+                      00172     
+004C                  00173 SEC2
+                      00174     
+004C   3081           00175     MOVLW B'10000001'
+                      00176     
+004D   0086           00177     MOVWF PORTB
+                      00178     
+004E   2???           00179     CALL RET
+                      00180     
+004F   30C3           00181     MOVLW B'11000011'
+                      00182     
+0050   0086           00183     MOVWF PORTB
+                      00184     
+0051   2???           00185     CALL RET
+                      00186     
+0052   30E7           00187     MOVLW B'11100111'
+                      00188     
+0053   0086           00189     MOVWF PORTB
+                      00190     
+0054   2???           00191     CALL RET
+                      00192     
+0055   30FF           00193     MOVLW B'11111111'
+                      00194     
+0056   0086           00195     MOVWF PORTB
+                      00196     
+0057   2???           00197     CALL RET
+                      00198     
+MPASM 5.75                   SERIE_LUCES.ASM   10-10-2017  23:01:46         PAGE  5
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+0058   30E7           00199     MOVLW B'11100111'
+                      00200     
+0059   0086           00201     MOVWF PORTB
+                      00202     
+005A   2???           00203     CALL RET
+                      00204     
+005B   30C3           00205     MOVLW B'11000011'
+                      00206     
+005C   0086           00207     MOVWF PORTB
+                      00208     
+005D   2???           00209     CALL RET
+                      00210     
+005E   3081           00211     MOVLW B'10000001'
+                      00212     
+005F   0086           00213     MOVWF PORTB
+                      00214     
+0060   2???           00215     CALL RET
+                      00216     
+0061   3000           00217     MOVLW B'00000000'
+                      00218     
+0062   0086           00219     MOVWF PORTB
+                      00220     
+0063   2???           00221     CALL RET
+                      00222     
+0064   0008           00223     RETURN
+                      00224     
+0065                  00225 SEC3
+                      00226     
+0065   3018           00227     MOVLW B'00011000'
+                      00228     
+0066   0086           00229     MOVWF PORTB
+                      00230     
+0067   2???           00231     CALL RET
+                      00232     
+0068   3099           00233     MOVLW B'10011001'
+                      00234     
+0069   0086           00235     MOVWF PORTB
+                      00236     
+006A   2???           00237     CALL RET
+                      00238     
+006B   30BD           00239     MOVLW B'10111101'
+                      00240     
+006C   0086           00241     MOVWF PORTB
+                      00242     
+006D   2???           00243     CALL RET
+                      00244     
+006E   30DB           00245     MOVLW B'11011011'
+                      00246     
+006F   0086           00247     MOVWF PORTB
+                      00248     
+0070   2???           00249     CALL RET
+                      00250     
+0071   30FF           00251     MOVLW B'11111111'
+MPASM 5.75                   SERIE_LUCES.ASM   10-10-2017  23:01:46         PAGE  6
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00252     
+0072   0086           00253     MOVWF PORTB
+                      00254     
+0073   2???           00255     CALL RET
+                      00256     
+0074   30E7           00257     MOVLW B'11100111'
+                      00258     
+0075   0086           00259     MOVWF PORTB
+                      00260     
+0076   2???           00261     CALL RET
+                      00262     
+0077   3042           00263     MOVLW B'01000010'
+                      00264     
+0078   0086           00265     MOVWF PORTB
+                      00266     
+0079   2???           00267     CALL RET
+                      00268     
+007A   3024           00269     MOVLW B'00100100'
+                      00270     
+007B   0086           00271     MOVWF PORTB
+                      00272     
+007C   2???           00273     CALL RET
+                      00274     
+007D   3000           00275     MOVLW B'00000000'
+                      00276     
+007E   0086           00277     MOVWF PORTB
+                      00278     
+007F   2???           00279     CALL RET
+                      00280     
+0080   0008           00281     RETURN
+                      00282     
+0081                  00283 RET
+                      00284     
+0081   30FF           00285     MOVLW B'11111111'
+                      00286     
+0082   0090           00287     MOVWF VAR1
+                      00288     
+0083                  00289 DEC_VAR1
+                      00290     
+Message[305]: Using default destination of 1 (file).
+0083   0B90           00291     DECFSZ VAR1
+                      00292     
+0084   2???           00293     GOTO SUBRET
+                      00294     
+0085   0008           00295     RETURN
+                      00296     
+0086                  00297 SUBRET
+                      00298     
+0086   30FF           00299     MOVLW B'11111111'
+                      00300     
+0087   0091           00301     MOVWF VAR2
+                      00302     
+0088                  00303 DEC_VAR2
+MPASM 5.75                   SERIE_LUCES.ASM   10-10-2017  23:01:46         PAGE  7
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00304     
+Message[305]: Using default destination of 1 (file).
+0088   0B91           00305     DECFSZ VAR2
+                      00306     
+0089   2???           00307     GOTO DEC_VAR2
+                      00308     
+008A   2???           00309     GOTO DEC_VAR1
+                      00310     
+Warning[205]: Found directive in column 1. (END)
+3FF1                  00311 END
+MPASM 5.75                   SERIE_LUCES.ASM   10-10-2017  23:01:46         PAGE  8
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+C                                 00000000
+DC                                00000001
+DEC_VAR1                          00000083
+DEC_VAR2                          00000088
+EEADR                             00000009
+EECON1                            00000088
+EECON2                            00000089
+EEDATA                            00000008
+EEIE                              00000006
+EEIF                              00000004
+F                                 00000001
+FSR                               00000004
+GIE                               00000007
+INDF                              00000000
+INTCON                            0000000B
+INTE                              00000004
+INTEDG                            00000006
+INTF                              00000001
+IRP                               00000007
+NOT_PD                            00000003
+NOT_RBPU                          00000007
+NOT_TO                            00000004
+OPTION_REG                        00000081
+PCL                               00000002
+PCLATH                            0000000A
+PORTA                             00000005
+PORTB                             00000006
+PS0                               00000000
+PS1                               00000001
+PS2                               00000002
+PSA                               00000003
+RA0                               00000000
+RA1                               00000001
+RA2                               00000002
+RA3                               00000003
+RA4                               00000004
+RB0                               00000000
+RB1                               00000001
+RB2                               00000002
+RB3                               00000003
+RB4                               00000004
+RB5                               00000005
+RB6                               00000006
+RB7                               00000007
+RBIE                              00000003
+RBIF                              00000000
+RD                                00000000
+RET                               00000081
+RP0                               00000005
+RP1                               00000006
+SEC1                              0000001B
+SEC2                              0000004C
+SEC3                              00000065
+MPASM 5.75                   SERIE_LUCES.ASM   10-10-2017  23:01:46         PAGE  9
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+SERIE_1                           00000004
+SERIE_2                           0000000A
+SERIE_3                           00000012
+STATUS                            00000003
+SUBRET                            00000086
+T0CS                              00000005
+T0IE                              00000005
+T0IF                              00000002
+T0SE                              00000004
+TMR0                              00000001
+TMR0IE                            00000005
+TMR0IF                            00000002
+TRISA                             00000085
+TRISA0                            00000000
+TRISA1                            00000001
+TRISA2                            00000002
+TRISA3                            00000003
+TRISA4                            00000004
+TRISB                             00000086
+TRISB0                            00000000
+TRISB1                            00000001
+TRISB2                            00000002
+TRISB3                            00000003
+TRISB4                            00000004
+TRISB5                            00000005
+TRISB6                            00000006
+TRISB7                            00000007
+VAR1                              00000010
+VAR2                              00000011
+W                                 00000000
+WR                                00000001
+WREN                              00000002
+WRERR                             00000003
+Z                                 00000002
+_CONFIG                           00002007
+_CP_OFF                           00003FFF
+_CP_ON                            0000000F
+_DEVID1                           00002006
+_FOSC_EXTRC                       00003FFF
+_FOSC_HS                          00003FFE
+_FOSC_LP                          00003FFC
+_FOSC_XT                          00003FFD
+_HS_OSC                           00003FFE
+_IDLOC0                           00002000
+_IDLOC1                           00002001
+_IDLOC2                           00002002
+_IDLOC3                           00002003
+_LP_OSC                           00003FFC
+_PWRTE_OFF                        00003FFF
+_PWRTE_ON                         00003FF7
+_RC_OSC                           00003FFF
+_WDTE_OFF                         00003FFB
+_WDTE_ON                          00003FFF
+MPASM 5.75                   SERIE_LUCES.ASM   10-10-2017  23:01:46         PAGE 10
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+_WDT_OFF                          00003FFB
+_WDT_ON                           00003FFF
+_XT_OSC                           00003FFD
+__16F84A                          00000001
+
+Errors   :     0
+Warnings :     3 reported,     0 suppressed
+Messages :     4 reported,     0 suppressed
+
+

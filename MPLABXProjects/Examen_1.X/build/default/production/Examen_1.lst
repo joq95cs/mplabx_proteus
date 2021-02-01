@@ -1,0 +1,290 @@
+MPASM 5.75                      EXAMEN_1.ASM   10-26-2017  17:14:23         PAGE  1
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00001     LIST P=16F84A
+                      00002     
+                      00003     INCLUDE<P16F84A.INC>
+                      00001         LIST
+                      00002 
+                      00003 ;==========================================================================
+                      00004 ; Build date : Jul 02 2017
+                      00005 ;  MPASM PIC16F84A processor include
+                      00006 ; 
+                      00007 ;  (c) Copyright 1999-2017 Microchip Technology, All rights reserved
+                      00008 ;==========================================================================
+                      00009 
+                      00209         LIST
+                      00004     
+Warning[207]: Found label after column 1. (VAR1)
+  00000020            00005     VAR1 EQU 0X020
+                      00006  
+Warning[207]: Found label after column 1. (VAR2)
+  00000021            00007     VAR2 EQU 0X021
+                      00008     
+                      00009     ORG 0
+                      00010     
+0000   1683           00011     BSF STATUS, RP0
+                      00012     
+0001   0186           00013     CLRF PORTB
+                      00014     
+0002   1283           00015     BCF STATUS, RP0
+                      00016     
+0003                  00017 CICLO
+                      00018     
+0003   3077           00019     MOVLW B'01110111'
+                      00020     
+0004   0086           00021     MOVWF PORTB
+                      00022     
+0005   2???           00023     CALL RET
+                      00024     
+0006   2???           00025     CALL RET
+                      00026     
+0007   3012           00027     MOVLW B'00010010'
+                      00028     
+0008   0086           00029     MOVWF PORTB
+                      00030     
+0009   2???           00031     CALL RET
+                      00032     
+000A   2???           00033     CALL RET
+                      00034     
+000B   306B           00035     MOVLW B'01101011'
+                      00036     
+000C   0086           00037     MOVWF PORTB
+                      00038     
+000D   2???           00039     CALL RET
+                      00040     
+000E   2???           00041     CALL RET
+MPASM 5.75                      EXAMEN_1.ASM   10-26-2017  17:14:23         PAGE  2
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00042     
+000F   305B           00043     MOVLW B'01011011'
+                      00044     
+0010   0086           00045     MOVWF PORTB
+                      00046     
+0011   2???           00047     CALL RET
+                      00048     
+0012   2???           00049     CALL RET
+                      00050     
+0013   301E           00051     MOVLW B'00011110'
+                      00052     
+0014   0086           00053     MOVWF PORTB
+                      00054     
+0015   2???           00055     CALL RET
+                      00056     
+0016   2???           00057     CALL RET
+                      00058     
+0017   305D           00059     MOVLW B'01011101'
+                      00060     
+0018   0086           00061     MOVWF PORTB
+                      00062     
+0019   2???           00063     CALL RET
+                      00064     
+001A   2???           00065     CALL RET
+                      00066     
+001B   307D           00067     MOVLW B'01111101'
+                      00068     
+001C   0086           00069     MOVWF PORTB
+                      00070     
+001D   2???           00071     CALL RET
+                      00072     
+001E   2???           00073     CALL RET
+                      00074     
+001F   3013           00075     MOVLW B'00010011'
+                      00076     
+0020   0086           00077     MOVWF PORTB
+                      00078     
+0021   2???           00079     CALL RET
+                      00080     
+0022   2???           00081     CALL RET
+                      00082     
+0023   307F           00083     MOVLW B'01111111'
+                      00084     
+0024   0086           00085     MOVWF PORTB
+                      00086     
+0025   2???           00087     CALL RET
+                      00088     
+0026   2???           00089     CALL RET
+                      00090     
+0027   301F           00091     MOVLW B'00011111'
+                      00092     
+0028   0086           00093     MOVWF PORTB
+                      00094     
+MPASM 5.75                      EXAMEN_1.ASM   10-26-2017  17:14:23         PAGE  3
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+0029   2???           00095     CALL RET
+                      00096     
+002A   2???           00097     CALL RET
+                      00098     
+002B   2???           00099     GOTO CICLO
+                      00100     
+002C                  00101 RET
+                      00102     
+002C   30FF           00103     MOVLW D'255'
+                      00104     
+002D   00A0           00105     MOVWF VAR1
+                      00106     
+002E                  00107 DEC
+                      00108     
+Message[305]: Using default destination of 1 (file).
+002E   0BA0           00109     DECFSZ VAR1
+                      00110     
+002F   2???           00111     GOTO SUBRET
+                      00112     
+0030   0008           00113     RETURN
+                      00114     
+0031                  00115 SUBRET
+                      00116     
+0031   30FF           00117     MOVLW D'255'
+                      00118     
+0032   00A1           00119     MOVWF VAR2
+                      00120     
+0033                  00121 SUBDEC
+                      00122     
+Message[305]: Using default destination of 1 (file).
+0033   0BA1           00123     DECFSZ VAR2
+                      00124     
+0034   2???           00125     GOTO SUBDEC
+                      00126     
+0035   2???           00127     GOTO DEC
+                      00128     
+                      00129     END
+MPASM 5.75                      EXAMEN_1.ASM   10-26-2017  17:14:23         PAGE  4
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+C                                 00000000
+CICLO                             00000003
+DC                                00000001
+DEC                               0000002E
+EEADR                             00000009
+EECON1                            00000088
+EECON2                            00000089
+EEDATA                            00000008
+EEIE                              00000006
+EEIF                              00000004
+F                                 00000001
+FSR                               00000004
+GIE                               00000007
+INDF                              00000000
+INTCON                            0000000B
+INTE                              00000004
+INTEDG                            00000006
+INTF                              00000001
+IRP                               00000007
+NOT_PD                            00000003
+NOT_RBPU                          00000007
+NOT_TO                            00000004
+OPTION_REG                        00000081
+PCL                               00000002
+PCLATH                            0000000A
+PORTA                             00000005
+PORTB                             00000006
+PS0                               00000000
+PS1                               00000001
+PS2                               00000002
+PSA                               00000003
+RA0                               00000000
+RA1                               00000001
+RA2                               00000002
+RA3                               00000003
+RA4                               00000004
+RB0                               00000000
+RB1                               00000001
+RB2                               00000002
+RB3                               00000003
+RB4                               00000004
+RB5                               00000005
+RB6                               00000006
+RB7                               00000007
+RBIE                              00000003
+RBIF                              00000000
+RD                                00000000
+RET                               0000002C
+RP0                               00000005
+RP1                               00000006
+STATUS                            00000003
+SUBDEC                            00000033
+SUBRET                            00000031
+MPASM 5.75                      EXAMEN_1.ASM   10-26-2017  17:14:23         PAGE  5
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+T0CS                              00000005
+T0IE                              00000005
+T0IF                              00000002
+T0SE                              00000004
+TMR0                              00000001
+TMR0IE                            00000005
+TMR0IF                            00000002
+TRISA                             00000085
+TRISA0                            00000000
+TRISA1                            00000001
+TRISA2                            00000002
+TRISA3                            00000003
+TRISA4                            00000004
+TRISB                             00000086
+TRISB0                            00000000
+TRISB1                            00000001
+TRISB2                            00000002
+TRISB3                            00000003
+TRISB4                            00000004
+TRISB5                            00000005
+TRISB6                            00000006
+TRISB7                            00000007
+VAR1                              00000020
+VAR2                              00000021
+W                                 00000000
+WR                                00000001
+WREN                              00000002
+WRERR                             00000003
+Z                                 00000002
+_CONFIG                           00002007
+_CP_OFF                           00003FFF
+_CP_ON                            0000000F
+_DEVID1                           00002006
+_FOSC_EXTRC                       00003FFF
+_FOSC_HS                          00003FFE
+_FOSC_LP                          00003FFC
+_FOSC_XT                          00003FFD
+_HS_OSC                           00003FFE
+_IDLOC0                           00002000
+_IDLOC1                           00002001
+_IDLOC2                           00002002
+_IDLOC3                           00002003
+_LP_OSC                           00003FFC
+_PWRTE_OFF                        00003FFF
+_PWRTE_ON                         00003FF7
+_RC_OSC                           00003FFF
+_WDTE_OFF                         00003FFB
+_WDTE_ON                          00003FFF
+_WDT_OFF                          00003FFB
+_WDT_ON                           00003FFF
+_XT_OSC                           00003FFD
+__16F84A                          00000001
+
+MPASM 5.75                      EXAMEN_1.ASM   10-26-2017  17:14:23         PAGE  6
+
+
+
+
+
+Errors   :     0
+Warnings :     2 reported,     0 suppressed
+Messages :     2 reported,     0 suppressed
+
+

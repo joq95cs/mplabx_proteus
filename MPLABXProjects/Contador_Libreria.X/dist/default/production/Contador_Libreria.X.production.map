@@ -1,0 +1,96 @@
+MPLINK 5.08, LINKER
+Linker Map File - Created Sat Nov 04 20:34:02 2017
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x0000d2
+                   .cinit    romdata   0x000069    program   0x000004
+.config_2007_BUILD/DEFAULT/PRODUCTION/CONTADO       code   0x002007    program   0x000002
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x00006a      
+                            0x002007    0x002007      
+            108 out of 1094 program addresses used, program memory utilization is 9%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                   INICIO   0x000003    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Libreria.X\Contador_Libreria.asm
+    R1Decima_BucleExterno   0x00005f    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Libreria.X\RETARDOS.INC
+   R1Decima_BucleExterno2   0x00005d    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Libreria.X\RETARDOS.INC
+    R1Decima_BucleInterno   0x000061    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Libreria.X\RETARDOS.INC
+        R1ms_BucleExterno   0x000049    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Libreria.X\RETARDOS.INC
+        R1ms_BucleInterno   0x00004b    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Libreria.X\RETARDOS.INC
+            RetardoMicros   0x000035    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Libreria.X\RETARDOS.INC
+        Retardo_100micros   0x00002f    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Libreria.X\RETARDOS.INC
+            Retardo_100ms   0x00003b    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Libreria.X\RETARDOS.INC
+         Retardo_10micros   0x000022    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Libreria.X\RETARDOS.INC
+             Retardo_10ms   0x000041    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Libreria.X\RETARDOS.INC
+              Retardo_10s   0x000053    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Libreria.X\RETARDOS.INC
+          Retardo_1Decima   0x00005c    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Libreria.X\RETARDOS.INC
+              Retardo_1ms   0x000047    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Libreria.X\RETARDOS.INC
+               Retardo_1s   0x000059    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Libreria.X\RETARDOS.INC
+        Retardo_200micros   0x00002c    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Libreria.X\RETARDOS.INC
+            Retardo_200ms   0x000039    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Libreria.X\RETARDOS.INC
+         Retardo_20micros   0x000034    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Libreria.X\RETARDOS.INC
+             Retardo_20ms   0x00003f    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Libreria.X\RETARDOS.INC
+              Retardo_20s   0x000051    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Libreria.X\RETARDOS.INC
+              Retardo_2ms   0x000045    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Libreria.X\RETARDOS.INC
+               Retardo_2s   0x000057    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Libreria.X\RETARDOS.INC
+          Retardo_4micros   0x000028    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Libreria.X\RETARDOS.INC
+        Retardo_500micros   0x000029    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Libreria.X\RETARDOS.INC
+            Retardo_500ms   0x00005b    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Libreria.X\RETARDOS.INC
+         Retardo_50micros   0x000031    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Libreria.X\RETARDOS.INC
+             Retardo_50ms   0x00003d    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Libreria.X\RETARDOS.INC
+          Retardo_5micros   0x000027    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Libreria.X\RETARDOS.INC
+              Retardo_5ms   0x000043    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Libreria.X\RETARDOS.INC
+               Retardo_5s   0x000055    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Libreria.X\RETARDOS.INC
+              Retardos_ms   0x000048    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Libreria.X\RETARDOS.INC
+            Rmicros_Bucle   0x000036    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Libreria.X\RETARDOS.INC
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                   INICIO   0x000003    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Libreria.X\Contador_Libreria.asm
+         Retardo_10micros   0x000022    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Libreria.X\RETARDOS.INC
+          Retardo_5micros   0x000027    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Libreria.X\RETARDOS.INC
+          Retardo_4micros   0x000028    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Libreria.X\RETARDOS.INC
+        Retardo_500micros   0x000029    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Libreria.X\RETARDOS.INC
+        Retardo_200micros   0x00002c    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Libreria.X\RETARDOS.INC
+        Retardo_100micros   0x00002f    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Libreria.X\RETARDOS.INC
+         Retardo_50micros   0x000031    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Libreria.X\RETARDOS.INC
+         Retardo_20micros   0x000034    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Libreria.X\RETARDOS.INC
+            RetardoMicros   0x000035    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Libreria.X\RETARDOS.INC
+            Rmicros_Bucle   0x000036    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Libreria.X\RETARDOS.INC
+            Retardo_200ms   0x000039    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Libreria.X\RETARDOS.INC
+            Retardo_100ms   0x00003b    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Libreria.X\RETARDOS.INC
+             Retardo_50ms   0x00003d    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Libreria.X\RETARDOS.INC
+             Retardo_20ms   0x00003f    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Libreria.X\RETARDOS.INC
+             Retardo_10ms   0x000041    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Libreria.X\RETARDOS.INC
+              Retardo_5ms   0x000043    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Libreria.X\RETARDOS.INC
+              Retardo_2ms   0x000045    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Libreria.X\RETARDOS.INC
+              Retardo_1ms   0x000047    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Libreria.X\RETARDOS.INC
+              Retardos_ms   0x000048    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Libreria.X\RETARDOS.INC
+        R1ms_BucleExterno   0x000049    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Libreria.X\RETARDOS.INC
+        R1ms_BucleInterno   0x00004b    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Libreria.X\RETARDOS.INC
+              Retardo_20s   0x000051    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Libreria.X\RETARDOS.INC
+              Retardo_10s   0x000053    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Libreria.X\RETARDOS.INC
+               Retardo_5s   0x000055    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Libreria.X\RETARDOS.INC
+               Retardo_2s   0x000057    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Libreria.X\RETARDOS.INC
+               Retardo_1s   0x000059    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Libreria.X\RETARDOS.INC
+            Retardo_500ms   0x00005b    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Libreria.X\RETARDOS.INC
+          Retardo_1Decima   0x00005c    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Libreria.X\RETARDOS.INC
+   R1Decima_BucleExterno2   0x00005d    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Libreria.X\RETARDOS.INC
+    R1Decima_BucleExterno   0x00005f    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Libreria.X\RETARDOS.INC
+    R1Decima_BucleInterno   0x000061    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Libreria.X\RETARDOS.INC
+
+

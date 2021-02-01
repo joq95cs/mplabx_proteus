@@ -1,0 +1,98 @@
+MPLINK 5.08, LINKER
+Linker Map File - Created Sun Nov 05 19:32:54 2017
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x0000ae
+                   .cinit    romdata   0x000057    program   0x000004
+.config_2007_BUILD/DEFAULT/PRODUCTION/PRUEBA_       code   0x002007    program   0x000002
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x000058      
+                            0x002007    0x002007      
+            90 out of 8454 program addresses used, program memory utilization is 1%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                   INICIO   0x000006    program     static C:\Users\joqle\Documents\MPLABXProjects\Prueba_Boton.X\Prueba_Boton.asm
+    R1Decima_BucleExterno   0x00004d    program     static C:\Users\joqle\Documents\MPLABXProjects\Prueba_Boton.X\RETARDOS.INC
+   R1Decima_BucleExterno2   0x00004b    program     static C:\Users\joqle\Documents\MPLABXProjects\Prueba_Boton.X\RETARDOS.INC
+    R1Decima_BucleInterno   0x00004f    program     static C:\Users\joqle\Documents\MPLABXProjects\Prueba_Boton.X\RETARDOS.INC
+        R1ms_BucleExterno   0x000037    program     static C:\Users\joqle\Documents\MPLABXProjects\Prueba_Boton.X\RETARDOS.INC
+        R1ms_BucleInterno   0x000039    program     static C:\Users\joqle\Documents\MPLABXProjects\Prueba_Boton.X\RETARDOS.INC
+            RetardoMicros   0x000023    program     static C:\Users\joqle\Documents\MPLABXProjects\Prueba_Boton.X\RETARDOS.INC
+        Retardo_100micros   0x00001d    program     static C:\Users\joqle\Documents\MPLABXProjects\Prueba_Boton.X\RETARDOS.INC
+            Retardo_100ms   0x000029    program     static C:\Users\joqle\Documents\MPLABXProjects\Prueba_Boton.X\RETARDOS.INC
+         Retardo_10micros   0x000010    program     static C:\Users\joqle\Documents\MPLABXProjects\Prueba_Boton.X\RETARDOS.INC
+             Retardo_10ms   0x00002f    program     static C:\Users\joqle\Documents\MPLABXProjects\Prueba_Boton.X\RETARDOS.INC
+              Retardo_10s   0x000041    program     static C:\Users\joqle\Documents\MPLABXProjects\Prueba_Boton.X\RETARDOS.INC
+          Retardo_1Decima   0x00004a    program     static C:\Users\joqle\Documents\MPLABXProjects\Prueba_Boton.X\RETARDOS.INC
+              Retardo_1ms   0x000035    program     static C:\Users\joqle\Documents\MPLABXProjects\Prueba_Boton.X\RETARDOS.INC
+               Retardo_1s   0x000047    program     static C:\Users\joqle\Documents\MPLABXProjects\Prueba_Boton.X\RETARDOS.INC
+        Retardo_200micros   0x00001a    program     static C:\Users\joqle\Documents\MPLABXProjects\Prueba_Boton.X\RETARDOS.INC
+            Retardo_200ms   0x000027    program     static C:\Users\joqle\Documents\MPLABXProjects\Prueba_Boton.X\RETARDOS.INC
+         Retardo_20micros   0x000022    program     static C:\Users\joqle\Documents\MPLABXProjects\Prueba_Boton.X\RETARDOS.INC
+             Retardo_20ms   0x00002d    program     static C:\Users\joqle\Documents\MPLABXProjects\Prueba_Boton.X\RETARDOS.INC
+              Retardo_20s   0x00003f    program     static C:\Users\joqle\Documents\MPLABXProjects\Prueba_Boton.X\RETARDOS.INC
+              Retardo_2ms   0x000033    program     static C:\Users\joqle\Documents\MPLABXProjects\Prueba_Boton.X\RETARDOS.INC
+               Retardo_2s   0x000045    program     static C:\Users\joqle\Documents\MPLABXProjects\Prueba_Boton.X\RETARDOS.INC
+          Retardo_4micros   0x000016    program     static C:\Users\joqle\Documents\MPLABXProjects\Prueba_Boton.X\RETARDOS.INC
+        Retardo_500micros   0x000017    program     static C:\Users\joqle\Documents\MPLABXProjects\Prueba_Boton.X\RETARDOS.INC
+            Retardo_500ms   0x000049    program     static C:\Users\joqle\Documents\MPLABXProjects\Prueba_Boton.X\RETARDOS.INC
+         Retardo_50micros   0x00001f    program     static C:\Users\joqle\Documents\MPLABXProjects\Prueba_Boton.X\RETARDOS.INC
+             Retardo_50ms   0x00002b    program     static C:\Users\joqle\Documents\MPLABXProjects\Prueba_Boton.X\RETARDOS.INC
+          Retardo_5micros   0x000015    program     static C:\Users\joqle\Documents\MPLABXProjects\Prueba_Boton.X\RETARDOS.INC
+              Retardo_5ms   0x000031    program     static C:\Users\joqle\Documents\MPLABXProjects\Prueba_Boton.X\RETARDOS.INC
+               Retardo_5s   0x000043    program     static C:\Users\joqle\Documents\MPLABXProjects\Prueba_Boton.X\RETARDOS.INC
+              Retardos_ms   0x000036    program     static C:\Users\joqle\Documents\MPLABXProjects\Prueba_Boton.X\RETARDOS.INC
+            Rmicros_Bucle   0x000024    program     static C:\Users\joqle\Documents\MPLABXProjects\Prueba_Boton.X\RETARDOS.INC
+                VERIFICAR   0x000008    program     static C:\Users\joqle\Documents\MPLABXProjects\Prueba_Boton.X\Prueba_Boton.asm
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                   INICIO   0x000006    program     static C:\Users\joqle\Documents\MPLABXProjects\Prueba_Boton.X\Prueba_Boton.asm
+                VERIFICAR   0x000008    program     static C:\Users\joqle\Documents\MPLABXProjects\Prueba_Boton.X\Prueba_Boton.asm
+         Retardo_10micros   0x000010    program     static C:\Users\joqle\Documents\MPLABXProjects\Prueba_Boton.X\RETARDOS.INC
+          Retardo_5micros   0x000015    program     static C:\Users\joqle\Documents\MPLABXProjects\Prueba_Boton.X\RETARDOS.INC
+          Retardo_4micros   0x000016    program     static C:\Users\joqle\Documents\MPLABXProjects\Prueba_Boton.X\RETARDOS.INC
+        Retardo_500micros   0x000017    program     static C:\Users\joqle\Documents\MPLABXProjects\Prueba_Boton.X\RETARDOS.INC
+        Retardo_200micros   0x00001a    program     static C:\Users\joqle\Documents\MPLABXProjects\Prueba_Boton.X\RETARDOS.INC
+        Retardo_100micros   0x00001d    program     static C:\Users\joqle\Documents\MPLABXProjects\Prueba_Boton.X\RETARDOS.INC
+         Retardo_50micros   0x00001f    program     static C:\Users\joqle\Documents\MPLABXProjects\Prueba_Boton.X\RETARDOS.INC
+         Retardo_20micros   0x000022    program     static C:\Users\joqle\Documents\MPLABXProjects\Prueba_Boton.X\RETARDOS.INC
+            RetardoMicros   0x000023    program     static C:\Users\joqle\Documents\MPLABXProjects\Prueba_Boton.X\RETARDOS.INC
+            Rmicros_Bucle   0x000024    program     static C:\Users\joqle\Documents\MPLABXProjects\Prueba_Boton.X\RETARDOS.INC
+            Retardo_200ms   0x000027    program     static C:\Users\joqle\Documents\MPLABXProjects\Prueba_Boton.X\RETARDOS.INC
+            Retardo_100ms   0x000029    program     static C:\Users\joqle\Documents\MPLABXProjects\Prueba_Boton.X\RETARDOS.INC
+             Retardo_50ms   0x00002b    program     static C:\Users\joqle\Documents\MPLABXProjects\Prueba_Boton.X\RETARDOS.INC
+             Retardo_20ms   0x00002d    program     static C:\Users\joqle\Documents\MPLABXProjects\Prueba_Boton.X\RETARDOS.INC
+             Retardo_10ms   0x00002f    program     static C:\Users\joqle\Documents\MPLABXProjects\Prueba_Boton.X\RETARDOS.INC
+              Retardo_5ms   0x000031    program     static C:\Users\joqle\Documents\MPLABXProjects\Prueba_Boton.X\RETARDOS.INC
+              Retardo_2ms   0x000033    program     static C:\Users\joqle\Documents\MPLABXProjects\Prueba_Boton.X\RETARDOS.INC
+              Retardo_1ms   0x000035    program     static C:\Users\joqle\Documents\MPLABXProjects\Prueba_Boton.X\RETARDOS.INC
+              Retardos_ms   0x000036    program     static C:\Users\joqle\Documents\MPLABXProjects\Prueba_Boton.X\RETARDOS.INC
+        R1ms_BucleExterno   0x000037    program     static C:\Users\joqle\Documents\MPLABXProjects\Prueba_Boton.X\RETARDOS.INC
+        R1ms_BucleInterno   0x000039    program     static C:\Users\joqle\Documents\MPLABXProjects\Prueba_Boton.X\RETARDOS.INC
+              Retardo_20s   0x00003f    program     static C:\Users\joqle\Documents\MPLABXProjects\Prueba_Boton.X\RETARDOS.INC
+              Retardo_10s   0x000041    program     static C:\Users\joqle\Documents\MPLABXProjects\Prueba_Boton.X\RETARDOS.INC
+               Retardo_5s   0x000043    program     static C:\Users\joqle\Documents\MPLABXProjects\Prueba_Boton.X\RETARDOS.INC
+               Retardo_2s   0x000045    program     static C:\Users\joqle\Documents\MPLABXProjects\Prueba_Boton.X\RETARDOS.INC
+               Retardo_1s   0x000047    program     static C:\Users\joqle\Documents\MPLABXProjects\Prueba_Boton.X\RETARDOS.INC
+            Retardo_500ms   0x000049    program     static C:\Users\joqle\Documents\MPLABXProjects\Prueba_Boton.X\RETARDOS.INC
+          Retardo_1Decima   0x00004a    program     static C:\Users\joqle\Documents\MPLABXProjects\Prueba_Boton.X\RETARDOS.INC
+   R1Decima_BucleExterno2   0x00004b    program     static C:\Users\joqle\Documents\MPLABXProjects\Prueba_Boton.X\RETARDOS.INC
+    R1Decima_BucleExterno   0x00004d    program     static C:\Users\joqle\Documents\MPLABXProjects\Prueba_Boton.X\RETARDOS.INC
+    R1Decima_BucleInterno   0x00004f    program     static C:\Users\joqle\Documents\MPLABXProjects\Prueba_Boton.X\RETARDOS.INC
+
+

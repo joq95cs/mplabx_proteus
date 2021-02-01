@@ -1,0 +1,40 @@
+MPLINK 5.08, LINKER
+Linker Map File - Created Thu Oct 26 17:14:25 2017
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x00006c
+                   .cinit    romdata   0x000036    program   0x000004
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x000037      
+            56 out of 1094 program addresses used, program memory utilization is 5%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                    CICLO   0x000003    program     static C:\Users\joqle\Documents\MPLABXProjects\Examen_1.X\Examen_1.asm
+                      DEC   0x00002e    program     static C:\Users\joqle\Documents\MPLABXProjects\Examen_1.X\Examen_1.asm
+                      RET   0x00002c    program     static C:\Users\joqle\Documents\MPLABXProjects\Examen_1.X\Examen_1.asm
+                   SUBDEC   0x000033    program     static C:\Users\joqle\Documents\MPLABXProjects\Examen_1.X\Examen_1.asm
+                   SUBRET   0x000031    program     static C:\Users\joqle\Documents\MPLABXProjects\Examen_1.X\Examen_1.asm
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                    CICLO   0x000003    program     static C:\Users\joqle\Documents\MPLABXProjects\Examen_1.X\Examen_1.asm
+                      RET   0x00002c    program     static C:\Users\joqle\Documents\MPLABXProjects\Examen_1.X\Examen_1.asm
+                      DEC   0x00002e    program     static C:\Users\joqle\Documents\MPLABXProjects\Examen_1.X\Examen_1.asm
+                   SUBRET   0x000031    program     static C:\Users\joqle\Documents\MPLABXProjects\Examen_1.X\Examen_1.asm
+                   SUBDEC   0x000033    program     static C:\Users\joqle\Documents\MPLABXProjects\Examen_1.X\Examen_1.asm
+
+

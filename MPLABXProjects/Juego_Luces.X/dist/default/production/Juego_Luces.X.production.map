@@ -1,0 +1,42 @@
+MPLINK 5.08, LINKER
+Linker Map File - Created Sat Nov 04 19:02:52 2017
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x000070
+                   .cinit    romdata   0x000038    program   0x000004
+.config_2007_BUILD/DEFAULT/PRODUCTION/JUEGO_L       code   0x002007    program   0x000002
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x000039      
+                            0x002007    0x002007      
+            59 out of 1094 program addresses used, program memory utilization is 5%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                     DEC1   0x000030    program     static C:\Users\joqle\Documents\MPLABXProjects\Juego_Luces.X\Juego_Luces.asm
+                     DEC2   0x000035    program     static C:\Users\joqle\Documents\MPLABXProjects\Juego_Luces.X\Juego_Luces.asm
+                   INICIO   0x000003    program     static C:\Users\joqle\Documents\MPLABXProjects\Juego_Luces.X\Juego_Luces.asm
+                     RET1   0x00002e    program     static C:\Users\joqle\Documents\MPLABXProjects\Juego_Luces.X\Juego_Luces.asm
+                     RET2   0x000033    program     static C:\Users\joqle\Documents\MPLABXProjects\Juego_Luces.X\Juego_Luces.asm
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                   INICIO   0x000003    program     static C:\Users\joqle\Documents\MPLABXProjects\Juego_Luces.X\Juego_Luces.asm
+                     RET1   0x00002e    program     static C:\Users\joqle\Documents\MPLABXProjects\Juego_Luces.X\Juego_Luces.asm
+                     DEC1   0x000030    program     static C:\Users\joqle\Documents\MPLABXProjects\Juego_Luces.X\Juego_Luces.asm
+                     RET2   0x000033    program     static C:\Users\joqle\Documents\MPLABXProjects\Juego_Luces.X\Juego_Luces.asm
+                     DEC2   0x000035    program     static C:\Users\joqle\Documents\MPLABXProjects\Juego_Luces.X\Juego_Luces.asm
+
+

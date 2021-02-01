@@ -1,0 +1,42 @@
+MPLINK 5.08, LINKER
+Linker Map File - Created Tue Oct 10 18:14:52 2017
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x000038
+                   .cinit    romdata   0x00001c    program   0x000004
+.config_2007_BUILD/DEFAULT/PRODUCTION/TRES_LE       code   0x002007    program   0x000002
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x00001d      
+                            0x002007    0x002007      
+            31 out of 1094 program addresses used, program memory utilization is 2%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                   CICLO1   0x000014    program     static C:\Users\joqle\Documents\MPLABXProjects\Tres_Leds.X\Tres_Leds.asm
+                   CICLO2   0x000019    program     static C:\Users\joqle\Documents\MPLABXProjects\Tres_Leds.X\Tres_Leds.asm
+                 RETARDO1   0x000012    program     static C:\Users\joqle\Documents\MPLABXProjects\Tres_Leds.X\Tres_Leds.asm
+                 RETARDO2   0x000017    program     static C:\Users\joqle\Documents\MPLABXProjects\Tres_Leds.X\Tres_Leds.asm
+                    SERIE   0x000005    program     static C:\Users\joqle\Documents\MPLABXProjects\Tres_Leds.X\Tres_Leds.asm
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                    SERIE   0x000005    program     static C:\Users\joqle\Documents\MPLABXProjects\Tres_Leds.X\Tres_Leds.asm
+                 RETARDO1   0x000012    program     static C:\Users\joqle\Documents\MPLABXProjects\Tres_Leds.X\Tres_Leds.asm
+                   CICLO1   0x000014    program     static C:\Users\joqle\Documents\MPLABXProjects\Tres_Leds.X\Tres_Leds.asm
+                 RETARDO2   0x000017    program     static C:\Users\joqle\Documents\MPLABXProjects\Tres_Leds.X\Tres_Leds.asm
+                   CICLO2   0x000019    program     static C:\Users\joqle\Documents\MPLABXProjects\Tres_Leds.X\Tres_Leds.asm
+
+

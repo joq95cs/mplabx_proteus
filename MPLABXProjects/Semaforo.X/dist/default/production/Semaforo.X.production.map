@@ -1,0 +1,48 @@
+MPLINK 5.08, LINKER
+Linker Map File - Created Tue Oct 10 18:42:54 2017
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x00007c
+                   .cinit    romdata   0x00003e    program   0x000004
+.config_2007_BUILD/DEFAULT/PRODUCTION/SEMAFOR       code   0x002007    program   0x000002
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x00003f      
+                            0x002007    0x002007      
+            65 out of 1094 program addresses used, program memory utilization is 5%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                     DEC1   0x000010    program     static C:\Users\joqle\Documents\MPLABXProjects\Semaforo.X\Semaforo.asm
+                     DEC2   0x000015    program     static C:\Users\joqle\Documents\MPLABXProjects\Semaforo.X\Semaforo.asm
+                  PROCESO   0x000004    program     static C:\Users\joqle\Documents\MPLABXProjects\Semaforo.X\Semaforo.asm
+                     RET1   0x00000e    program     static C:\Users\joqle\Documents\MPLABXProjects\Semaforo.X\Semaforo.asm
+                     RET2   0x000013    program     static C:\Users\joqle\Documents\MPLABXProjects\Semaforo.X\Semaforo.asm
+             RET_AMARILLO   0x000023    program     static C:\Users\joqle\Documents\MPLABXProjects\Semaforo.X\Semaforo.asm
+                 RET_ROJO   0x000018    program     static C:\Users\joqle\Documents\MPLABXProjects\Semaforo.X\Semaforo.asm
+                RET_VERDE   0x000029    program     static C:\Users\joqle\Documents\MPLABXProjects\Semaforo.X\Semaforo.asm
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                  PROCESO   0x000004    program     static C:\Users\joqle\Documents\MPLABXProjects\Semaforo.X\Semaforo.asm
+                     RET1   0x00000e    program     static C:\Users\joqle\Documents\MPLABXProjects\Semaforo.X\Semaforo.asm
+                     DEC1   0x000010    program     static C:\Users\joqle\Documents\MPLABXProjects\Semaforo.X\Semaforo.asm
+                     RET2   0x000013    program     static C:\Users\joqle\Documents\MPLABXProjects\Semaforo.X\Semaforo.asm
+                     DEC2   0x000015    program     static C:\Users\joqle\Documents\MPLABXProjects\Semaforo.X\Semaforo.asm
+                 RET_ROJO   0x000018    program     static C:\Users\joqle\Documents\MPLABXProjects\Semaforo.X\Semaforo.asm
+             RET_AMARILLO   0x000023    program     static C:\Users\joqle\Documents\MPLABXProjects\Semaforo.X\Semaforo.asm
+                RET_VERDE   0x000029    program     static C:\Users\joqle\Documents\MPLABXProjects\Semaforo.X\Semaforo.asm
+
+

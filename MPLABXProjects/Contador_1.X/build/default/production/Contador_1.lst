@@ -1,0 +1,296 @@
+MPASM 5.75                    CONTADOR_1.ASM   10-11-2017  17:39:23         PAGE  1
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00001     LIST P = 16F84A
+                      00002     
+                      00003     INCLUDE <P16F84A.INC>
+                      00001         LIST
+                      00002 
+                      00003 ;==========================================================================
+                      00004 ; Build date : Jul 02 2017
+                      00005 ;  MPASM PIC16F84A processor include
+                      00006 ; 
+                      00007 ;  (c) Copyright 1999-2017 Microchip Technology, All rights reserved
+                      00008 ;==========================================================================
+                      00009 
+                      00209         LIST
+                      00004     
+2007   3FF1           00005     __CONFIG _CP_OFF & _WDT_OFF & _PWRTE_ON & _XT_OSC
+                      00006     
+Warning[207]: Found label after column 1. (V1)
+  00000020            00007     V1 EQU 0X020
+                      00008  
+Warning[207]: Found label after column 1. (V2)
+  00000021            00009     V2 EQU 0X021
+                      00010     
+                      00011     ORG 0
+                      00012     
+0000   1683           00013     BSF STATUS, RP0
+                      00014     
+0001   3080           00015     MOVLW D'128'
+                      00016     
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+0002   0086           00017     MOVWF TRISB
+                      00018     
+0003   1283           00019     BCF STATUS, RP0
+                      00020     
+0004                  00021 CICLO
+                      00022     
+0004   303F           00023     MOVLW B'00111111'
+                      00024     
+0005   0086           00025     MOVWF PORTB
+                      00026     
+0006   2???           00027     CALL RETARDO
+                      00028     
+0007   2???           00029     CALL RETARDO
+                      00030     
+0008   3006           00031     MOVLW B'00000110'
+                      00032     
+0009   0086           00033     MOVWF PORTB
+                      00034     
+000A   2???           00035     CALL RETARDO
+                      00036     
+000B   2???           00037     CALL RETARDO
+                      00038     
+000C   305B           00039     MOVLW B'01011011'
+                      00040     
+MPASM 5.75                    CONTADOR_1.ASM   10-11-2017  17:39:23         PAGE  2
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+000D   0086           00041     MOVWF PORTB
+                      00042     
+000E   2???           00043     CALL RETARDO
+                      00044     
+000F   2???           00045     CALL RETARDO
+                      00046     
+0010   304F           00047     MOVLW B'01001111'
+                      00048     
+0011   0086           00049     MOVWF PORTB
+                      00050     
+0012   2???           00051     CALL RETARDO
+                      00052     
+0013   2???           00053     CALL RETARDO
+                      00054     
+0014   3066           00055     MOVLW B'01100110'
+                      00056     
+0015   0086           00057     MOVWF PORTB
+                      00058     
+0016   2???           00059     CALL RETARDO
+                      00060     
+0017   2???           00061     CALL RETARDO
+                      00062     
+0018   306D           00063     MOVLW B'01101101'
+                      00064     
+0019   0086           00065     MOVWF PORTB
+                      00066     
+001A   2???           00067     CALL RETARDO
+                      00068     
+001B   2???           00069     CALL RETARDO
+                      00070     
+001C   307D           00071     MOVLW B'01111101'
+                      00072     
+001D   0086           00073     MOVWF PORTB
+                      00074     
+001E   2???           00075     CALL RETARDO
+                      00076     
+001F   2???           00077     CALL RETARDO
+                      00078     
+0020   3007           00079     MOVLW B'00000111'
+                      00080     
+0021   0086           00081     MOVWF PORTB
+                      00082     
+0022   2???           00083     CALL RETARDO
+                      00084     
+0023   2???           00085     CALL RETARDO
+                      00086     
+0024   307F           00087     MOVLW B'01111111'
+                      00088     
+0025   0086           00089     MOVWF PORTB
+                      00090     
+0026   2???           00091     CALL RETARDO
+                      00092     
+0027   2???           00093     CALL RETARDO
+MPASM 5.75                    CONTADOR_1.ASM   10-11-2017  17:39:23         PAGE  3
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00094     
+0028   306F           00095     MOVLW B'01101111'
+                      00096     
+0029   0086           00097     MOVWF PORTB
+                      00098     
+002A   2???           00099     CALL RETARDO
+                      00100     
+002B   2???           00101     CALL RETARDO
+                      00102     
+002C   2???           00103     GOTO CICLO
+                      00104     
+002D                  00105 RETARDO
+                      00106     
+002D   30FF           00107     MOVLW D'255'
+                      00108     
+002E   00A0           00109     MOVWF V1
+                      00110     
+002F                  00111 DEC
+                      00112     
+Message[305]: Using default destination of 1 (file).
+002F   0BA0           00113     DECFSZ V1
+                      00114     
+0030   2???           00115     GOTO SUBRET
+                      00116     
+0031   0008           00117     RETURN
+                      00118     
+0032                  00119 SUBRET
+                      00120     
+0032   30FF           00121     MOVLW D'255'
+                      00122     
+0033   00A1           00123     MOVWF V2
+                      00124     
+0034                  00125 SUBDEC
+                      00126     
+Message[305]: Using default destination of 1 (file).
+0034   0BA1           00127     DECFSZ V2
+                      00128     
+0035   2???           00129     GOTO SUBDEC
+                      00130     
+0036   2???           00131     GOTO DEC
+                      00132     
+Warning[205]: Found directive in column 1. (END)
+3FF1                  00133 END
+MPASM 5.75                    CONTADOR_1.ASM   10-11-2017  17:39:23         PAGE  4
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+C                                 00000000
+CICLO                             00000004
+DC                                00000001
+DEC                               0000002F
+EEADR                             00000009
+EECON1                            00000088
+EECON2                            00000089
+EEDATA                            00000008
+EEIE                              00000006
+EEIF                              00000004
+F                                 00000001
+FSR                               00000004
+GIE                               00000007
+INDF                              00000000
+INTCON                            0000000B
+INTE                              00000004
+INTEDG                            00000006
+INTF                              00000001
+IRP                               00000007
+NOT_PD                            00000003
+NOT_RBPU                          00000007
+NOT_TO                            00000004
+OPTION_REG                        00000081
+PCL                               00000002
+PCLATH                            0000000A
+PORTA                             00000005
+PORTB                             00000006
+PS0                               00000000
+PS1                               00000001
+PS2                               00000002
+PSA                               00000003
+RA0                               00000000
+RA1                               00000001
+RA2                               00000002
+RA3                               00000003
+RA4                               00000004
+RB0                               00000000
+RB1                               00000001
+RB2                               00000002
+RB3                               00000003
+RB4                               00000004
+RB5                               00000005
+RB6                               00000006
+RB7                               00000007
+RBIE                              00000003
+RBIF                              00000000
+RD                                00000000
+RETARDO                           0000002D
+RP0                               00000005
+RP1                               00000006
+STATUS                            00000003
+SUBDEC                            00000034
+SUBRET                            00000032
+MPASM 5.75                    CONTADOR_1.ASM   10-11-2017  17:39:23         PAGE  5
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+T0CS                              00000005
+T0IE                              00000005
+T0IF                              00000002
+T0SE                              00000004
+TMR0                              00000001
+TMR0IE                            00000005
+TMR0IF                            00000002
+TRISA                             00000085
+TRISA0                            00000000
+TRISA1                            00000001
+TRISA2                            00000002
+TRISA3                            00000003
+TRISA4                            00000004
+TRISB                             00000086
+TRISB0                            00000000
+TRISB1                            00000001
+TRISB2                            00000002
+TRISB3                            00000003
+TRISB4                            00000004
+TRISB5                            00000005
+TRISB6                            00000006
+TRISB7                            00000007
+V1                                00000020
+V2                                00000021
+W                                 00000000
+WR                                00000001
+WREN                              00000002
+WRERR                             00000003
+Z                                 00000002
+_CONFIG                           00002007
+_CP_OFF                           00003FFF
+_CP_ON                            0000000F
+_DEVID1                           00002006
+_FOSC_EXTRC                       00003FFF
+_FOSC_HS                          00003FFE
+_FOSC_LP                          00003FFC
+_FOSC_XT                          00003FFD
+_HS_OSC                           00003FFE
+_IDLOC0                           00002000
+_IDLOC1                           00002001
+_IDLOC2                           00002002
+_IDLOC3                           00002003
+_LP_OSC                           00003FFC
+_PWRTE_OFF                        00003FFF
+_PWRTE_ON                         00003FF7
+_RC_OSC                           00003FFF
+_WDTE_OFF                         00003FFB
+_WDTE_ON                          00003FFF
+_WDT_OFF                          00003FFB
+_WDT_ON                           00003FFF
+_XT_OSC                           00003FFD
+__16F84A                          00000001
+
+MPASM 5.75                    CONTADOR_1.ASM   10-11-2017  17:39:23         PAGE  6
+
+
+
+
+
+Errors   :     0
+Warnings :     3 reported,     0 suppressed
+Messages :     3 reported,     0 suppressed
+
+

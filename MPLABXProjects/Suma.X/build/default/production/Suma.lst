@@ -1,0 +1,937 @@
+MPASM 5.75                          SUMA.ASM   10-23-2017  17:51:21         PAGE  1
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+Warning[215]: Processor superseded by command line.  Verify processor symbol.
+                      00001     LIST P=16F877A
+                      00002     
+                      00003     INCLUDE<P16F877A.INC>
+                      00001         LIST
+                      00002 
+                      00003 ;==========================================================================
+                      00004 ; Build date : Jul 02 2017
+                      00005 ;  MPASM PIC16F877A processor include
+                      00006 ; 
+                      00007 ;  (c) Copyright 1999-2017 Microchip Technology, All rights reserved
+                      00008 ;==========================================================================
+                      00009 
+Message[301]: MESSAGE: (Processor-header file mismatch.  Verify selected processor.)
+                      00567         LIST
+                      00004     
+2007   3F71           00005     __CONFIG _WDT_OFF & _PWRTE_ON & _XT_OSC & _LVP_OFF & _CP_OFF
+                      00006     
+Warning[207]: Found label after column 1. (NUM1)
+  00000020            00007     NUM1 EQU 0X020
+                      00008  
+Warning[207]: Found label after column 1. (NUM2)
+  00000021            00009     NUM2 EQU 0X021
+                      00010  
+Warning[207]: Found label after column 1. (VAR)
+  00000023            00011     VAR EQU 0X023
+                      00012  
+Warning[207]: Found label after column 1. (TEMP1)
+  00000024            00013     TEMP1 EQU 0X024
+                      00014  
+Warning[207]: Found label after column 1. (TEMP2)
+  00000025            00015     TEMP2 EQU 0X025
+                      00016  
+Warning[207]: Found label after column 1. (PUERTO)
+  00000026            00017     PUERTO EQU 0X026
+                      00018  
+Warning[207]: Found label after column 1. (AUX)
+  00000027            00019     AUX EQU 0X027
+                      00020  
+                      00021     ORG 0
+                      00022     
+0000   1683           00023     BSF STATUS, RP0
+                      00024     
+0001   0186           00025     CLRF PORTB
+                      00026     
+0002   0187           00027     CLRF PORTC
+                      00028     
+0003   0188           00029     CLRF PORTD
+                      00030     
+0004   1283           00031     BCF STATUS, RP0
+                      00032     
+0005                  00033 SUMA
+                      00034     
+MPASM 5.75                          SUMA.ASM   10-23-2017  17:51:21         PAGE  2
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+0005   3002           00035     MOVLW D'2'
+                      00036     
+0006   00A0           00037     MOVWF NUM1
+                      00038     
+0007   2???           00039     CALL PRUEBA_9
+                      00040     
+0008   0826           00041     MOVFW PUERTO
+                      00042     
+0009   0086           00043     MOVWF PORTB
+                      00044     
+Warning[207]: Found label after column 1. (PUERTO)
+  00000026            00045     PUERTO EQU 0X026
+                      00046  
+000A   3005           00047     MOVLW D'5'
+                      00048     
+000B   00A1           00049     MOVWF NUM2
+                      00050     
+000C   2???           00051     CALL PRUEBA_9
+                      00052     
+000D   0826           00053     MOVFW PUERTO
+                      00054     
+000E   0087           00055     MOVWF PORTC
+                      00056     
+Warning[207]: Found label after column 1. (PUERTO)
+  00000026            00057     PUERTO EQU 0X026
+                      00058     
+000F   0820           00059     MOVFW NUM1
+                      00060     
+0010   0721           00061     ADDWF NUM2, 0
+                      00062     
+0011   2???           00063     CALL PRUEBA_9
+                      00064     
+0012   0826           00065     MOVFW PUERTO
+                      00066     
+0013   0088           00067     MOVWF PORTD
+                      00068     
+0014   2???           00069     GOTO SUMA
+                      00070     
+0015                  00071 PRUEBA_9
+                      00072     
+0015   00A4           00073     MOVWF TEMP1
+                      00074     
+0016   00A5           00075     MOVWF TEMP2
+                      00076     
+0017   3009           00077     MOVLW D'9'
+                      00078     
+0018   00A3           00079     MOVWF VAR
+                      00080     
+0019                  00081 DEC_9
+                      00082     
+Message[305]: Using default destination of 1 (file).
+0019   03A4           00083     DECF TEMP1
+                      00084     
+MPASM 5.75                          SUMA.ASM   10-23-2017  17:51:21         PAGE  3
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+Message[305]: Using default destination of 1 (file).
+001A   0BA3           00085     DECFSZ VAR
+                      00086     
+001B   2???           00087     GOTO DEC_9
+                      00088     
+001C   3001           00089     MOVLW D'1'
+                      00090     
+001D   07A4           00091     ADDWF TEMP1, 1
+                      00092     
+Message[305]: Using default destination of 1 (file).
+001E   0BA4           00093     DECFSZ TEMP1
+                      00094     
+001F   2???           00095     GOTO PRUEBA_8
+                      00096     
+0020   306F           00097     MOVLW B'01101111'
+                      00098     
+0021   00A6           00099     MOVWF PUERTO
+                      00100     
+0022   0008           00101     RETURN
+                      00102     
+0023                  00103 PRUEBA_8
+                      00104     
+0023   0825           00105     MOVFW TEMP2
+                      00106     
+0024   00A4           00107     MOVWF TEMP1
+                      00108     
+Warning[207]: Found label after column 1. (TEMP2)
+  00000025            00109     TEMP2 EQU 0X025
+                      00110  
+0025   00A5           00111     MOVWF TEMP2
+                      00112     
+0026   3008           00113     MOVLW D'8'
+                      00114     
+0027   00A3           00115     MOVWF VAR
+                      00116     
+0028                  00117 DEC_8
+                      00118     
+Message[305]: Using default destination of 1 (file).
+0028   03A4           00119     DECF TEMP1
+                      00120     
+Message[305]: Using default destination of 1 (file).
+0029   0BA3           00121     DECFSZ VAR
+                      00122     
+002A   2???           00123     GOTO DEC_8
+                      00124     
+002B   3001           00125     MOVLW D'1'
+                      00126     
+002C   07A4           00127     ADDWF TEMP1, 1
+                      00128     
+Message[305]: Using default destination of 1 (file).
+002D   0BA4           00129     DECFSZ TEMP1
+                      00130     
+002E   2???           00131     GOTO PRUEBA_7
+MPASM 5.75                          SUMA.ASM   10-23-2017  17:51:21         PAGE  4
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00132     
+002F   307F           00133     MOVLW B'01111111'
+                      00134     
+0030   00A6           00135     MOVWF PUERTO
+                      00136     
+0031   0008           00137     RETURN
+                      00138     
+0032                  00139 PRUEBA_7
+                      00140     
+0032   0825           00141     MOVFW TEMP2
+                      00142     
+0033   00A4           00143     MOVWF TEMP1
+                      00144     
+Warning[207]: Found label after column 1. (TEMP2)
+  00000025            00145     TEMP2 EQU 0X025
+                      00146  
+0034   00A5           00147     MOVWF TEMP2
+                      00148     
+0035   3007           00149     MOVLW D'7'
+                      00150     
+0036   00A3           00151     MOVWF VAR
+                      00152     
+0037                  00153 DEC_7
+                      00154     
+Message[305]: Using default destination of 1 (file).
+0037   03A4           00155     DECF TEMP1
+                      00156     
+Message[305]: Using default destination of 1 (file).
+0038   0BA3           00157     DECFSZ VAR
+                      00158     
+0039   2???           00159     GOTO DEC_7
+                      00160     
+003A   3001           00161     MOVLW D'1'
+                      00162     
+003B   07A4           00163     ADDWF TEMP1, 1
+                      00164     
+Message[305]: Using default destination of 1 (file).
+003C   0BA4           00165     DECFSZ TEMP1
+                      00166     
+003D   2???           00167     GOTO PRUEBA_6
+                      00168     
+003E   3007           00169     MOVLW B'00000111'
+                      00170     
+003F   00A6           00171     MOVWF PUERTO
+                      00172     
+0040   0008           00173     RETURN
+                      00174     
+0041                  00175 PRUEBA_6
+                      00176     
+0041   0825           00177     MOVFW TEMP2
+                      00178     
+0042   00A4           00179     MOVWF TEMP1
+                      00180     
+MPASM 5.75                          SUMA.ASM   10-23-2017  17:51:21         PAGE  5
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+Warning[207]: Found label after column 1. (TEMP2)
+  00000025            00181     TEMP2 EQU 0X025
+                      00182  
+0043   00A5           00183     MOVWF TEMP2
+                      00184     
+0044   3006           00185     MOVLW D'6'
+                      00186     
+0045   00A3           00187     MOVWF VAR
+                      00188     
+0046                  00189 DEC_6
+                      00190     
+Message[305]: Using default destination of 1 (file).
+0046   03A4           00191     DECF TEMP1
+                      00192     
+Message[305]: Using default destination of 1 (file).
+0047   0BA3           00193     DECFSZ VAR
+                      00194     
+0048   2???           00195     GOTO DEC_6
+                      00196     
+0049   3001           00197     MOVLW D'1'
+                      00198     
+004A   07A4           00199     ADDWF TEMP1, 1
+                      00200     
+Message[305]: Using default destination of 1 (file).
+004B   0BA4           00201     DECFSZ TEMP1
+                      00202     
+004C   2???           00203     GOTO PRUEBA_5
+                      00204     
+004D   307D           00205     MOVLW B'01111101'
+                      00206     
+004E   00A6           00207     MOVWF PUERTO
+                      00208     
+004F   0008           00209     RETURN
+                      00210     
+0050                  00211 PRUEBA_5
+                      00212     
+0050   0825           00213     MOVFW TEMP2
+                      00214     
+0051   00A4           00215     MOVWF TEMP1
+                      00216     
+Warning[207]: Found label after column 1. (TEMP2)
+  00000025            00217     TEMP2 EQU 0X025
+                      00218  
+0052   00A5           00219     MOVWF TEMP2
+                      00220     
+0053   3005           00221     MOVLW D'5'
+                      00222     
+0054   00A3           00223     MOVWF VAR
+                      00224     
+0055                  00225 DEC_5
+                      00226     
+Message[305]: Using default destination of 1 (file).
+0055   03A4           00227     DECF TEMP1
+MPASM 5.75                          SUMA.ASM   10-23-2017  17:51:21         PAGE  6
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00228     
+Message[305]: Using default destination of 1 (file).
+0056   0BA3           00229     DECFSZ VAR
+                      00230     
+0057   2???           00231     GOTO DEC_5
+                      00232     
+0058   3001           00233     MOVLW D'1'
+                      00234     
+0059   07A4           00235     ADDWF TEMP1, 1
+                      00236     
+Message[305]: Using default destination of 1 (file).
+005A   0BA4           00237     DECFSZ TEMP1
+                      00238     
+005B   2???           00239     GOTO PRUEBA_4
+                      00240     
+005C   306D           00241     MOVLW B'01101101'
+                      00242     
+005D   00A6           00243     MOVWF PUERTO
+                      00244     
+005E   0008           00245     RETURN
+                      00246     
+005F                  00247 PRUEBA_4
+                      00248     
+005F   0825           00249     MOVFW TEMP2
+                      00250     
+0060   00A4           00251     MOVWF TEMP1
+                      00252     
+Warning[207]: Found label after column 1. (TEMP2)
+  00000025            00253     TEMP2 EQU 0X025
+                      00254  
+0061   00A5           00255     MOVWF TEMP2
+                      00256     
+0062   3004           00257     MOVLW D'4'
+                      00258     
+0063   00A3           00259     MOVWF VAR
+                      00260     
+0064                  00261 DEC_4
+                      00262     
+Message[305]: Using default destination of 1 (file).
+0064   03A4           00263     DECF TEMP1
+                      00264     
+Message[305]: Using default destination of 1 (file).
+0065   0BA3           00265     DECFSZ VAR
+                      00266     
+0066   2???           00267     GOTO DEC_4
+                      00268     
+0067   3001           00269     MOVLW D'1'
+                      00270     
+0068   07A4           00271     ADDWF TEMP1, 1
+                      00272     
+Message[305]: Using default destination of 1 (file).
+0069   0BA4           00273     DECFSZ TEMP1
+                      00274     
+MPASM 5.75                          SUMA.ASM   10-23-2017  17:51:21         PAGE  7
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+006A   2???           00275     GOTO PRUEBA_3
+                      00276     
+006B   3066           00277     MOVLW B'01100110'
+                      00278     
+006C   00A6           00279     MOVWF PUERTO
+                      00280     
+006D   0008           00281     RETURN
+                      00282     
+006E                  00283 PRUEBA_3
+                      00284     
+006E   0825           00285     MOVFW TEMP2
+                      00286     
+006F   00A4           00287     MOVWF TEMP1
+                      00288     
+Warning[207]: Found label after column 1. (TEMP2)
+  00000025            00289     TEMP2 EQU 0X025
+                      00290  
+0070   00A5           00291     MOVWF TEMP2
+                      00292     
+0071   3003           00293     MOVLW D'3'
+                      00294     
+0072   00A3           00295     MOVWF VAR
+                      00296     
+0073                  00297 DEC_3
+                      00298     
+Message[305]: Using default destination of 1 (file).
+0073   03A4           00299     DECF TEMP1
+                      00300     
+Message[305]: Using default destination of 1 (file).
+0074   0BA3           00301     DECFSZ VAR
+                      00302     
+0075   2???           00303     GOTO DEC_3
+                      00304     
+0076   3001           00305     MOVLW D'1'
+                      00306     
+0077   07A4           00307     ADDWF TEMP1, 1
+                      00308     
+Message[305]: Using default destination of 1 (file).
+0078   0BA4           00309     DECFSZ TEMP1
+                      00310     
+0079   2???           00311     GOTO PRUEBA_2
+                      00312     
+007A   304F           00313     MOVLW B'01001111'
+                      00314     
+007B   00A6           00315     MOVWF PUERTO
+                      00316     
+007C   0008           00317     RETURN
+                      00318     
+007D                  00319 PRUEBA_2
+                      00320     
+007D   0825           00321     MOVFW TEMP2
+                      00322     
+007E   00A4           00323     MOVWF TEMP1
+MPASM 5.75                          SUMA.ASM   10-23-2017  17:51:21         PAGE  8
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00324     
+Warning[207]: Found label after column 1. (TEMP2)
+  00000025            00325     TEMP2 EQU 0X025
+                      00326  
+007F   00A5           00327     MOVWF TEMP2
+                      00328     
+0080   3002           00329     MOVLW D'2'
+                      00330     
+0081   00A3           00331     MOVWF VAR
+                      00332     
+0082                  00333 DEC_2
+                      00334     
+Message[305]: Using default destination of 1 (file).
+0082   03A4           00335     DECF TEMP1
+                      00336     
+Message[305]: Using default destination of 1 (file).
+0083   0BA3           00337     DECFSZ VAR
+                      00338     
+0084   2???           00339     GOTO DEC_2
+                      00340     
+0085   3001           00341     MOVLW D'1'
+                      00342     
+0086   07A4           00343     ADDWF TEMP1, 1
+                      00344     
+Message[305]: Using default destination of 1 (file).
+0087   0BA4           00345     DECFSZ TEMP1
+                      00346     
+0088   2???           00347     GOTO PRUEBA_1
+                      00348     
+0089   305B           00349     MOVLW B'01011011'
+                      00350     
+008A   00A6           00351     MOVWF PUERTO
+                      00352     
+008B   0008           00353     RETURN
+                      00354     
+008C                  00355 PRUEBA_1
+                      00356     
+008C   0825           00357     MOVFW TEMP2
+                      00358     
+008D   00A4           00359     MOVWF TEMP1
+                      00360     
+Warning[207]: Found label after column 1. (TEMP2)
+  00000025            00361     TEMP2 EQU 0X025
+                      00362  
+008E   00A5           00363     MOVWF TEMP2
+                      00364     
+008F   3001           00365     MOVLW D'1'
+                      00366     
+0090   00A3           00367     MOVWF VAR
+                      00368     
+0091                  00369 DEC_1
+                      00370     
+Message[305]: Using default destination of 1 (file).
+MPASM 5.75                          SUMA.ASM   10-23-2017  17:51:21         PAGE  9
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+0091   03A4           00371     DECF TEMP1
+                      00372     
+Message[305]: Using default destination of 1 (file).
+0092   0BA3           00373     DECFSZ VAR
+                      00374     
+0093   2???           00375     GOTO DEC_1
+                      00376     
+0094   3001           00377     MOVLW D'1'
+                      00378     
+0095   07A4           00379     ADDWF TEMP1, 1
+                      00380     
+Message[305]: Using default destination of 1 (file).
+0096   0BA4           00381     DECFSZ TEMP1
+                      00382     
+0097   2???           00383     GOTO PRUEBA_0
+                      00384     
+0098   3006           00385     MOVLW B'00000110'
+                      00386     
+0099   00A6           00387     MOVWF PUERTO
+                      00388     
+009A   0008           00389     RETURN
+                      00390     
+009B                  00391 PRUEBA_0
+                      00392     
+009B   303F           00393     MOVLW B'00111111'
+                      00394     
+009C   00A6           00395     MOVWF PUERTO
+                      00396     
+009D   0008           00397     RETURN
+                      00398     
+Warning[205]: Found directive in column 1. (END)
+3F71                  00399 END   
+MPASM 5.75                          SUMA.ASM   10-23-2017  17:51:21         PAGE 10
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+ACKDT                             00000005
+ACKEN                             00000004
+ACKSTAT                           00000006
+ADCON0                            0000001F
+ADCON1                            0000009F
+ADCS0                             00000006
+ADCS1                             00000007
+ADCS2                             00000006
+ADDEN                             00000003
+ADFM                              00000007
+ADIE                              00000006
+ADIF                              00000006
+ADON                              00000000
+ADRESH                            0000001E
+ADRESL                            0000009E
+AUX                               00000027
+BCLIE                             00000003
+BCLIF                             00000003
+BF                                00000000
+BRGH                              00000002
+C                                 00000000
+C1INV                             00000004
+C1OUT                             00000006
+C2INV                             00000005
+C2OUT                             00000007
+CCP1CON                           00000017
+CCP1IE                            00000002
+CCP1IF                            00000002
+CCP1M0                            00000000
+CCP1M1                            00000001
+CCP1M2                            00000002
+CCP1M3                            00000003
+CCP1X                             00000005
+CCP1Y                             00000004
+CCP2CON                           0000001D
+CCP2IE                            00000000
+CCP2IF                            00000000
+CCP2M0                            00000000
+CCP2M1                            00000001
+CCP2M2                            00000002
+CCP2M3                            00000003
+CCP2X                             00000005
+CCP2Y                             00000004
+CCPR1                             00000015
+CCPR1H                            00000016
+CCPR1L                            00000015
+CCPR2                             0000001B
+CCPR2H                            0000001C
+CCPR2L                            0000001B
+CHS0                              00000003
+CHS1                              00000004
+CHS2                              00000005
+CIS                               00000003
+MPASM 5.75                          SUMA.ASM   10-23-2017  17:51:21         PAGE 11
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+CKE                               00000006
+CKP                               00000004
+CM0                               00000000
+CM1                               00000001
+CM2                               00000002
+CMCON                             0000009C
+CMIE                              00000006
+CMIF                              00000006
+CREN                              00000004
+CSRC                              00000007
+CVR0                              00000000
+CVR1                              00000001
+CVR2                              00000002
+CVR3                              00000003
+CVRCON                            0000009D
+CVREN                             00000007
+CVROE                             00000006
+CVRR                              00000005
+D                                 00000005
+DATA_ADDRESS                      00000005
+DC                                00000001
+DEC_1                             00000091
+DEC_2                             00000082
+DEC_3                             00000073
+DEC_4                             00000064
+DEC_5                             00000055
+DEC_6                             00000046
+DEC_7                             00000037
+DEC_8                             00000028
+DEC_9                             00000019
+D_A                               00000005
+D_NOT_A                           00000005
+EEADR                             0000010D
+EEADRH                            0000010F
+EECON1                            0000018C
+EECON2                            0000018D
+EEDATA                            0000010C
+EEDATH                            0000010E
+EEIE                              00000004
+EEIF                              00000004
+EEPGD                             00000007
+F                                 00000001
+FERR                              00000002
+FSR                               00000004
+GCEN                              00000007
+GIE                               00000007
+GO                                00000002
+GO_DONE                           00000002
+GO_NOT_DONE                       00000002
+I2C_DATA                          00000005
+I2C_READ                          00000002
+I2C_START                         00000003
+I2C_STOP                          00000004
+MPASM 5.75                          SUMA.ASM   10-23-2017  17:51:21         PAGE 12
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+IBF                               00000007
+IBOV                              00000005
+INDF                              00000000
+INTCON                            0000000B
+INTE                              00000004
+INTEDG                            00000006
+INTF                              00000001
+IRP                               00000007
+NOT_A                             00000005
+NOT_ADDRESS                       00000005
+NOT_BO                            00000000
+NOT_BOR                           00000000
+NOT_DONE                          00000002
+NOT_PD                            00000003
+NOT_POR                           00000001
+NOT_RBPU                          00000007
+NOT_RC8                           00000006
+NOT_T1SYNC                        00000002
+NOT_TO                            00000004
+NOT_TX8                           00000006
+NOT_W                             00000002
+NOT_WRITE                         00000002
+NUM1                              00000020
+NUM2                              00000021
+OBF                               00000006
+OERR                              00000001
+OPTION_REG                        00000081
+P                                 00000004
+PCFG0                             00000000
+PCFG1                             00000001
+PCFG2                             00000002
+PCFG3                             00000003
+PCL                               00000002
+PCLATH                            0000000A
+PCON                              0000008E
+PEIE                              00000006
+PEN                               00000002
+PIE1                              0000008C
+PIE2                              0000008D
+PIR1                              0000000C
+PIR2                              0000000D
+PORTA                             00000005
+PORTB                             00000006
+PORTC                             00000007
+PORTD                             00000008
+PORTE                             00000009
+PR2                               00000092
+PRUEBA_0                          0000009B
+PRUEBA_1                          0000008C
+PRUEBA_2                          0000007D
+PRUEBA_3                          0000006E
+PRUEBA_4                          0000005F
+PRUEBA_5                          00000050
+MPASM 5.75                          SUMA.ASM   10-23-2017  17:51:21         PAGE 13
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+PRUEBA_6                          00000041
+PRUEBA_7                          00000032
+PRUEBA_8                          00000023
+PRUEBA_9                          00000015
+PS0                               00000000
+PS1                               00000001
+PS2                               00000002
+PSA                               00000003
+PSPIE                             00000007
+PSPIF                             00000007
+PSPMODE                           00000004
+PUERTO                            00000026
+R                                 00000002
+RA0                               00000000
+RA1                               00000001
+RA2                               00000002
+RA3                               00000003
+RA4                               00000004
+RA5                               00000005
+RB0                               00000000
+RB1                               00000001
+RB2                               00000002
+RB3                               00000003
+RB4                               00000004
+RB5                               00000005
+RB6                               00000006
+RB7                               00000007
+RBIE                              00000003
+RBIF                              00000000
+RC0                               00000000
+RC1                               00000001
+RC2                               00000002
+RC3                               00000003
+RC4                               00000004
+RC5                               00000005
+RC6                               00000006
+RC7                               00000007
+RC8_9                             00000006
+RC9                               00000006
+RCD8                              00000000
+RCEN                              00000003
+RCIE                              00000005
+RCIF                              00000005
+RCREG                             0000001A
+RCSTA                             00000018
+RD                                00000000
+RD0                               00000000
+RD1                               00000001
+RD2                               00000002
+RD3                               00000003
+RD4                               00000004
+RD5                               00000005
+RD6                               00000006
+MPASM 5.75                          SUMA.ASM   10-23-2017  17:51:21         PAGE 14
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+RD7                               00000007
+RE0                               00000000
+RE1                               00000001
+RE2                               00000002
+READ_WRITE                        00000002
+RP0                               00000005
+RP1                               00000006
+RSEN                              00000001
+RX9                               00000006
+RX9D                              00000000
+R_NOT_W                           00000002
+R_W                               00000002
+S                                 00000003
+SEN                               00000000
+SMP                               00000007
+SPBRG                             00000099
+SPEN                              00000007
+SREN                              00000005
+SSPADD                            00000093
+SSPBUF                            00000013
+SSPCON                            00000014
+SSPCON2                           00000091
+SSPEN                             00000005
+SSPIE                             00000003
+SSPIF                             00000003
+SSPM0                             00000000
+SSPM1                             00000001
+SSPM2                             00000002
+SSPM3                             00000003
+SSPOV                             00000006
+SSPSTAT                           00000094
+STATUS                            00000003
+SUMA                              00000005
+SYNC                              00000004
+T0CS                              00000005
+T0IE                              00000005
+T0IF                              00000002
+T0SE                              00000004
+T1CKPS0                           00000004
+T1CKPS1                           00000005
+T1CON                             00000010
+T1INSYNC                          00000002
+T1OSCEN                           00000003
+T1SYNC                            00000002
+T2CKPS0                           00000000
+T2CKPS1                           00000001
+T2CON                             00000012
+TEMP1                             00000024
+TEMP2                             00000025
+TMR0                              00000001
+TMR0IE                            00000005
+TMR0IF                            00000002
+TMR1                              0000000E
+MPASM 5.75                          SUMA.ASM   10-23-2017  17:51:21         PAGE 15
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+TMR1CS                            00000001
+TMR1H                             0000000F
+TMR1IE                            00000000
+TMR1IF                            00000000
+TMR1L                             0000000E
+TMR1ON                            00000000
+TMR2                              00000011
+TMR2IE                            00000001
+TMR2IF                            00000001
+TMR2ON                            00000002
+TOUTPS0                           00000003
+TOUTPS1                           00000004
+TOUTPS2                           00000005
+TOUTPS3                           00000006
+TRISA                             00000085
+TRISA0                            00000000
+TRISA1                            00000001
+TRISA2                            00000002
+TRISA3                            00000003
+TRISA4                            00000004
+TRISA5                            00000005
+TRISB                             00000086
+TRISB0                            00000000
+TRISB1                            00000001
+TRISB2                            00000002
+TRISB3                            00000003
+TRISB4                            00000004
+TRISB5                            00000005
+TRISB6                            00000006
+TRISB7                            00000007
+TRISC                             00000087
+TRISC0                            00000000
+TRISC1                            00000001
+TRISC2                            00000002
+TRISC3                            00000003
+TRISC4                            00000004
+TRISC5                            00000005
+TRISC6                            00000006
+TRISC7                            00000007
+TRISD                             00000088
+TRISD0                            00000000
+TRISD1                            00000001
+TRISD2                            00000002
+TRISD3                            00000003
+TRISD4                            00000004
+TRISD5                            00000005
+TRISD6                            00000006
+TRISD7                            00000007
+TRISE                             00000089
+TRISE0                            00000000
+TRISE1                            00000001
+TRISE2                            00000002
+TRMT                              00000001
+MPASM 5.75                          SUMA.ASM   10-23-2017  17:51:21         PAGE 16
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+TX8_9                             00000006
+TX9                               00000006
+TX9D                              00000000
+TXD8                              00000000
+TXEN                              00000005
+TXIE                              00000004
+TXIF                              00000004
+TXREG                             00000019
+TXSTA                             00000098
+UA                                00000001
+VAR                               00000023
+W                                 00000000
+WCOL                              00000007
+WR                                00000001
+WREN                              00000002
+WRERR                             00000003
+Z                                 00000002
+_BODEN_OFF                        00003FBF
+_BODEN_ON                         00003FFF
+_BOREN_OFF                        00003FBF
+_BOREN_ON                         00003FFF
+_CONFIG                           00002007
+_CPD_OFF                          00003FFF
+_CPD_ON                           00003EFF
+_CP_ALL                           00001FFF
+_CP_OFF                           00003FFF
+_CP_ON                            00001FFF
+_DEBUG_OFF                        00003FFF
+_DEBUG_ON                         000037FF
+_DEVID1                           00002006
+_FOSC_EXTRC                       00003FFF
+_FOSC_HS                          00003FFE
+_FOSC_LP                          00003FFC
+_FOSC_XT                          00003FFD
+_HS_OSC                           00003FFE
+_IDLOC0                           00002000
+_IDLOC1                           00002001
+_IDLOC2                           00002002
+_IDLOC3                           00002003
+_LP_OSC                           00003FFC
+_LVP_OFF                          00003F7F
+_LVP_ON                           00003FFF
+_PWRTE_OFF                        00003FFF
+_PWRTE_ON                         00003FF7
+_RC_OSC                           00003FFF
+_WDTE_OFF                         00003FFB
+_WDTE_ON                          00003FFF
+_WDT_OFF                          00003FFB
+_WDT_ON                           00003FFF
+_WRT_1FOURTH                      00003BFF
+_WRT_256                          00003DFF
+_WRT_HALF                         000039FF
+_WRT_OFF                          00003FFF
+MPASM 5.75                          SUMA.ASM   10-23-2017  17:51:21         PAGE 17
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+_XT_OSC                           00003FFD
+__16F84A                          00000001
+
+Errors   :     0
+Warnings :    19 reported,     0 suppressed
+Messages :    28 reported,     0 suppressed
+
+

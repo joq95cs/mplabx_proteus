@@ -1,0 +1,9 @@
+Warning[207] C:\USERS\JOQLE\DOCUMENTS\MPLABXPROJECTS\TRES_LEDS.X\TRES_LEDS.ASM 7 : Found label after column 1. (TIEMPO1)
+Warning[207] C:\USERS\JOQLE\DOCUMENTS\MPLABXPROJECTS\TRES_LEDS.X\TRES_LEDS.ASM 9 : Found label after column 1. (TIEMPO2)
+Warning[219] C:\USERS\JOQLE\DOCUMENTS\MPLABXPROJECTS\TRES_LEDS.X\TRES_LEDS.ASM 53 : Invalid RAM location specified.
+Message[302] C:\USERS\JOQLE\DOCUMENTS\MPLABXPROJECTS\TRES_LEDS.X\TRES_LEDS.ASM 53 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[305] C:\USERS\JOQLE\DOCUMENTS\MPLABXPROJECTS\TRES_LEDS.X\TRES_LEDS.ASM 59 : Using default destination of 1 (file).
+Warning[219] C:\USERS\JOQLE\DOCUMENTS\MPLABXPROJECTS\TRES_LEDS.X\TRES_LEDS.ASM 67 : Invalid RAM location specified.
+Message[302] C:\USERS\JOQLE\DOCUMENTS\MPLABXPROJECTS\TRES_LEDS.X\TRES_LEDS.ASM 67 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[305] C:\USERS\JOQLE\DOCUMENTS\MPLABXPROJECTS\TRES_LEDS.X\TRES_LEDS.ASM 73 : Using default destination of 1 (file).
+Warning[205] C:\USERS\JOQLE\DOCUMENTS\MPLABXPROJECTS\TRES_LEDS.X\TRES_LEDS.ASM 79 : Found directive in column 1. (END)

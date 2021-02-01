@@ -1,0 +1,102 @@
+MPLINK 5.08, LINKER
+Linker Map File - Created Sat Nov 04 22:35:54 2017
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x0000c8
+                   .cinit    romdata   0x000064    program   0x000004
+.config_2007_BUILD/DEFAULT/PRODUCTION/CONTADO       code   0x002007    program   0x000002
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x000065      
+                            0x002007    0x002007      
+            103 out of 1094 program addresses used, program memory utilization is 9%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                   CONTAR   0x000008    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Tabla.X\Contador_Tabla.asm
+                   INICIO   0x000003    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Tabla.X\Contador_Tabla.asm
+    R1Decima_BucleExterno   0x00005a    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Tabla.X\RETARDOS.INC
+   R1Decima_BucleExterno2   0x000058    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Tabla.X\RETARDOS.INC
+    R1Decima_BucleInterno   0x00005c    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Tabla.X\RETARDOS.INC
+        R1ms_BucleExterno   0x000044    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Tabla.X\RETARDOS.INC
+        R1ms_BucleInterno   0x000046    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Tabla.X\RETARDOS.INC
+            RetardoMicros   0x000030    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Tabla.X\RETARDOS.INC
+        Retardo_100micros   0x00002a    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Tabla.X\RETARDOS.INC
+            Retardo_100ms   0x000036    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Tabla.X\RETARDOS.INC
+         Retardo_10micros   0x00001d    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Tabla.X\RETARDOS.INC
+             Retardo_10ms   0x00003c    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Tabla.X\RETARDOS.INC
+              Retardo_10s   0x00004e    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Tabla.X\RETARDOS.INC
+          Retardo_1Decima   0x000057    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Tabla.X\RETARDOS.INC
+              Retardo_1ms   0x000042    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Tabla.X\RETARDOS.INC
+               Retardo_1s   0x000054    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Tabla.X\RETARDOS.INC
+        Retardo_200micros   0x000027    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Tabla.X\RETARDOS.INC
+            Retardo_200ms   0x000034    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Tabla.X\RETARDOS.INC
+         Retardo_20micros   0x00002f    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Tabla.X\RETARDOS.INC
+             Retardo_20ms   0x00003a    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Tabla.X\RETARDOS.INC
+              Retardo_20s   0x00004c    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Tabla.X\RETARDOS.INC
+              Retardo_2ms   0x000040    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Tabla.X\RETARDOS.INC
+               Retardo_2s   0x000052    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Tabla.X\RETARDOS.INC
+          Retardo_4micros   0x000023    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Tabla.X\RETARDOS.INC
+        Retardo_500micros   0x000024    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Tabla.X\RETARDOS.INC
+            Retardo_500ms   0x000056    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Tabla.X\RETARDOS.INC
+         Retardo_50micros   0x00002c    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Tabla.X\RETARDOS.INC
+             Retardo_50ms   0x000038    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Tabla.X\RETARDOS.INC
+          Retardo_5micros   0x000022    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Tabla.X\RETARDOS.INC
+              Retardo_5ms   0x00003e    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Tabla.X\RETARDOS.INC
+               Retardo_5s   0x000050    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Tabla.X\RETARDOS.INC
+              Retardos_ms   0x000043    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Tabla.X\RETARDOS.INC
+            Rmicros_Bucle   0x000031    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Tabla.X\RETARDOS.INC
+          SIETE_SEGMENTOS   0x000012    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Tabla.X\Contador_Tabla.asm
+                    TABLA   0x000013    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Tabla.X\Contador_Tabla.asm
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                   INICIO   0x000003    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Tabla.X\Contador_Tabla.asm
+                   CONTAR   0x000008    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Tabla.X\Contador_Tabla.asm
+          SIETE_SEGMENTOS   0x000012    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Tabla.X\Contador_Tabla.asm
+                    TABLA   0x000013    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Tabla.X\Contador_Tabla.asm
+         Retardo_10micros   0x00001d    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Tabla.X\RETARDOS.INC
+          Retardo_5micros   0x000022    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Tabla.X\RETARDOS.INC
+          Retardo_4micros   0x000023    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Tabla.X\RETARDOS.INC
+        Retardo_500micros   0x000024    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Tabla.X\RETARDOS.INC
+        Retardo_200micros   0x000027    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Tabla.X\RETARDOS.INC
+        Retardo_100micros   0x00002a    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Tabla.X\RETARDOS.INC
+         Retardo_50micros   0x00002c    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Tabla.X\RETARDOS.INC
+         Retardo_20micros   0x00002f    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Tabla.X\RETARDOS.INC
+            RetardoMicros   0x000030    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Tabla.X\RETARDOS.INC
+            Rmicros_Bucle   0x000031    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Tabla.X\RETARDOS.INC
+            Retardo_200ms   0x000034    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Tabla.X\RETARDOS.INC
+            Retardo_100ms   0x000036    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Tabla.X\RETARDOS.INC
+             Retardo_50ms   0x000038    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Tabla.X\RETARDOS.INC
+             Retardo_20ms   0x00003a    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Tabla.X\RETARDOS.INC
+             Retardo_10ms   0x00003c    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Tabla.X\RETARDOS.INC
+              Retardo_5ms   0x00003e    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Tabla.X\RETARDOS.INC
+              Retardo_2ms   0x000040    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Tabla.X\RETARDOS.INC
+              Retardo_1ms   0x000042    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Tabla.X\RETARDOS.INC
+              Retardos_ms   0x000043    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Tabla.X\RETARDOS.INC
+        R1ms_BucleExterno   0x000044    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Tabla.X\RETARDOS.INC
+        R1ms_BucleInterno   0x000046    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Tabla.X\RETARDOS.INC
+              Retardo_20s   0x00004c    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Tabla.X\RETARDOS.INC
+              Retardo_10s   0x00004e    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Tabla.X\RETARDOS.INC
+               Retardo_5s   0x000050    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Tabla.X\RETARDOS.INC
+               Retardo_2s   0x000052    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Tabla.X\RETARDOS.INC
+               Retardo_1s   0x000054    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Tabla.X\RETARDOS.INC
+            Retardo_500ms   0x000056    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Tabla.X\RETARDOS.INC
+          Retardo_1Decima   0x000057    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Tabla.X\RETARDOS.INC
+   R1Decima_BucleExterno2   0x000058    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Tabla.X\RETARDOS.INC
+    R1Decima_BucleExterno   0x00005a    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Tabla.X\RETARDOS.INC
+    R1Decima_BucleInterno   0x00005c    program     static C:\Users\joqle\Documents\MPLABXProjects\Contador_Tabla.X\RETARDOS.INC
+
+
